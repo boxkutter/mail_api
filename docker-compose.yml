@@ -1,0 +1,9 @@
+services:
+  mail-api:
+    build: .
+    container_name: mail-api
+    restart: always
+    env_file:
+      - .env         # your real secrets remain outside container
+    ports:
+      - "8000:8000"  # maps host port 8000 to container port 8000
